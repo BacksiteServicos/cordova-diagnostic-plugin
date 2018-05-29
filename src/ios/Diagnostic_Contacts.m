@@ -10,8 +10,7 @@
 
 @implementation Diagnostic_Contacts
 
-// Internal reference to Diagnostic singleton instance
-static Diagnostic* diagnostic;
+Diagnostic* diagnostic;
 
 #if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_9_0
 ABAddressBookRef _addressBook;

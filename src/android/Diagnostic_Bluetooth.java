@@ -120,12 +120,8 @@ public class Diagnostic_Bluetooth extends CordovaPlugin{
         instance = this;
         diagnostic = Diagnostic.getInstance();
 
-        try {
-            diagnostic.applicationContext.registerReceiver(bluetoothStateChangeReceiver, new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED));
-            currentBluetoothState = getBluetoothState();
-        }catch(Exception e){
-            diagnostic.logWarning("Unable to register Bluetooth state change receiver: " + e.getMessage());
-        }
+        diagnostic.applicationContext.registerReceiver(bluetoothStateChangeReceiver, new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED));
+        currentBluetoothState = getBluetoothState();
 
         super.initialize(cordova, webView);
     }
@@ -244,10 +240,6 @@ public class Diagnostic_Bluetooth extends CordovaPlugin{
         String bluetoothState = BLUETOOTH_STATE_UNKNOWN;
         if(hasBluetoothSupport()){
             BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-            if(mBluetoothAdapter == null){
-                diagnostic.logWarning("Bluetooth adapter unavailable or not found");
-                return BLUETOOTH_STATE_UNKNOWN;
-            }
             int state = mBluetoothAdapter.getState();
             switch(state){
                 case BluetoothAdapter.STATE_OFF:

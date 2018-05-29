@@ -10,8 +10,7 @@
 
 @implementation Diagnostic_Microphone
 
-// Internal reference to Diagnostic singleton instance
-static Diagnostic* diagnostic;
+Diagnostic* diagnostic;
 
 // Internal constants
 static NSString*const LOG_TAG = @"Diagnostic_Microphone[native]";

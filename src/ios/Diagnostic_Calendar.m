@@ -11,8 +11,7 @@
 
 @implementation Diagnostic_Calendar
 
-// Internal reference to Diagnostic singleton instance
-static Diagnostic* diagnostic;
+Diagnostic* diagnostic;
 
 // Internal constants
 static NSString*const LOG_TAG = @"Diagnostic_Calendar[native]";

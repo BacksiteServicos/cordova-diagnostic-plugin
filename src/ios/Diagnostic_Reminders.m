@@ -10,8 +10,7 @@
 
 @implementation Diagnostic_Reminders
 
-// Internal reference to Diagnostic singleton instance
-static Diagnostic* diagnostic;
+Diagnostic* diagnostic;
 
 // Internal constants
 static NSString*const LOG_TAG = @"Diagnostic_Reminders[native]";
