@@ -1,3 +1,3 @@
 # Sobre
 
-Este plugin é uam cópia do plugin diagnostic do usuario "dpa99c".
+Este plugin é uma cópia do plugin diagnostic do usuario "dpa99c".
